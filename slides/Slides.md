@@ -25,9 +25,81 @@ Taken 10 applications to Production ranging from simple RAG to more complex Agen
 
 # What is Generative AI
 
+Generative AI refers to artificial intelligence systems that can create new content, including text, images, code, and more.
+
+## Key Types of Generative AI Models
+
+<div class="columns">
+<div>
+
+### Large Language Models (LLMs)
+- **Text generation and understanding**
+- Examples: GPT, Claude, LLaMA
+- Trained on vast amounts of text data
+- Can perform various language tasks
+
+</div>
+<div>
+
+### Other Generative Models
+- **Image generation** (DALL-E, Midjourney)
+- **Code generation** (GitHub Copilot)
+- **Audio/Video synthesis**
+- **Multimodal models** (GPT-4V, Gemini)
+
+</div>
+</div>
+
+<!-- 
+LLMs are the foundation of most modern AI applications we interact with daily.
+They understand context, generate human-like text, and can be fine-tuned for specific tasks.
+-->
+
 ---
 
-# How models are created
+# How LLMs are Created
+
+The creation of Large Language Models involves several complex stages requiring massive computational resources and careful engineering.
+
+## The Creation Pipeline
+
+<div class="columns3">
+<div>
+
+### 📊 Data Collection
+- **Web scraping** at internet scale
+- **Books, articles, code repositories**
+- **Quality filtering and deduplication**
+- **Ethical considerations and consent**
+
+</div>
+<div>
+
+### 🏋️ Training Process
+- **Pre-training**: Learn language patterns
+- **Fine-tuning**: Task-specific optimization  
+- **RLHF**: Human feedback alignment
+- **Optimization algorithms** (Adam, AdamW)
+
+</div>
+<div>
+
+### 🏗️ Infrastructure
+- **Thousands of GPUs/TPUs**
+- **Distributed computing clusters**
+- **Months of training time**
+- **Millions in computational costs**
+
+</div>
+</div>
+
+### Key Challenges
+- **Data quality and bias mitigation** • **Computational efficiency** • **Model alignment and safety**
+
+<!-- 
+Training LLMs requires coordination across thousands of machines, sophisticated data pipelines, and careful attention to model behavior and safety.
+The entire process can cost tens of millions of dollars and requires world-class engineering expertise.
+-->
 
 ---
 
