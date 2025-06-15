@@ -27,6 +27,12 @@ Taken 10 applications to Production ranging from simple RAG to more complex Agen
 
 ---
 
+# What is an LLM?
+
+A Large Language Model (LLM) is an advanced artificial intelligence system trained on massive amounts of text data to understand, generate, and predict text. Examples include OpenAI's GPT models and Google's BERT.
+
+---
+
 # How models are created
 
 ---
