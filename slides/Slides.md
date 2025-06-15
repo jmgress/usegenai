@@ -21,3 +21,10 @@ _Emerging Technology and AI Lead / Accenture_
 Done 100's of Prototypes
 Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems
 -->
+---
+
+# What is Generative AI
+
+---
+
+# How models are created
