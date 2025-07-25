@@ -1,14 +1,14 @@
 ---
 marp: true
 theme: custom-default
-footer: 'James Gress | AI Director @ Accenture | https://jmgress.github.io/futureofswe/'
+footer: 'James Gress | AI Director @ Accenture | https://jmgress.github.io/usegenai/'
 ---
-# Future of Software Engineering in the Age of AI
+# Hype to Help: Demystifying AI for Everyday Impact
 
 ![bg right:40%](img/00-jamesgress.png)
 
 ## James Gress
-_Emerging Technology and AI Lead / Accenture_
+_ATC AI Lead / Accenture_
 
 
 <i class="fa-brands fa-linkedin"></i> LinkedIn: - [jamesgress](https://linkedin.com/in/jamesgress/)  
