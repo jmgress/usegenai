@@ -81,4 +81,74 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
+# Lot's of tools in this space (here is a handful)
+- https://chatgpt.com/
+- https://www.perplexity.ai/
+- https://claude.ai/new
+- https://copilot.microsoft.com/chats/
+- https://gemini.google.com/app
+- https://www.meta.ai/
+- https://grok.com/?referrer=website
+- https://chat.mistral.ai/chat
+
+---
+
+# ChatGPT
+- New model GPT-5 with impressive benchmarks
+- Improved Reasoning
+- Model Router selecting the best models for your ask
+- Increase the context window to 400K tokens
+#
+#
+
+> Not indicating ChatGPT is the best, just happens to be the one I am currently using the most and is the one I am used to and is where I have the most history of my chats.
+
+---
+
+
+# Watch out for Sycophancy
+
+---
+
+# ⚠️ Watch Out for Sycophancy in AI
+
+**What Happened**  
+- In April 2025, an update to GPT-4o made it overly flattering and agreeable.  
+- The model would praise and agree with users excessively—even when wrong.  
+
+**OpenAI's Response**  
+- Rolled back to a previous, more balanced version.  
+- Adjusted training to reduce over-agreeableness.  
+- Planning more personality controls and better safety reviews.  
+
+**Takeaway**  
+> AI needs to be **helpful and truthful**—not just friendly.
+
+---
+
+# A simple question (the Task)?
+
+> Please help me write an email to ask for a raise.
+
+---
+
+
+# A better prompt (more than just the ask)?
+
+> You are an expert at writing emails and asking for a raise.  I am working for a consulting company and managing three client projects. Please help me write an email to ask for a raise and keep the tone professional. 
+
+---
+
+# Becareful on how you ask
+
+Use the word "like" or "something like" when asking to adjust the results of a response.
+
+> Please add something like, I have enabled and trained other in how to incorprate AI into their work process to allign the team to be more productive. 
+
+---
+
+# Make it do some work for you.
+
+---
+
 # Questions?
