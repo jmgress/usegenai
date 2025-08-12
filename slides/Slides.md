@@ -22,21 +22,28 @@ Done 100's of Prototypes
 Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems
 Specialize in AI in the SDLD or TDLC
 -->
+
+---
+
+# What Is AI?
+
+AI" stands for Artificial Intelligence, which refers to the ability of a computer or machine to perform tasks that typically require human intelligence. These tasks can include learning, problem-solving, perception, and decision-making. AI is a broad field encompassing various techniques and approaches aimed at creating intelligent systems. 
+
 ---
 
 # What Is Generative AI?
 
-- **Creates new content** instead of just finding existing info  
-- Examples: text, images, code, creative ideas  
-- **Pattern-based prediction**, not thinking or consciousness  
-- Uses **Large Language Models (LLMs)** trained on vast data to predict what comes next  
+Generative AI is a type of artificial intelligence that creates new content like text, images, audio, and video in response to prompts. Unlike search engines that find and curate existing information, generative AI learns from data to produce novel outputs. 
 
-
-**💡 Simple Analogy:**  
-Like a super-powered autocomplete — it’s read billions of examples, learned the patterns, and predicts the next word, pixel, or note until the work is complete.  
-The results can look creative or logical, but it’s really just *very good prediction*.
 
 ---
+
+# What is an LLM (Large Language Model)
+
+An LLM, or Large Language Model, is a type of artificial intelligence model trained on massive amounts of text data to understand, generate, and manipulate human language. Essentially, it's a sophisticated computer program that can process and produce text in a way that mimics human communication. 
+
+---
+
 
 # From Data to Intelligence: How AI Models Are Born
 
@@ -49,9 +56,21 @@ The results can look creative or logical, but it’s really just *very good pred
 
 <!-- You have to watch out for this and check your work, it has told me things that didn't exist, just becuase of the way I worded it -->
 
+
 ---
 
-# Let's do everything live.....
+# Models use a Contex Window
+
+<div style="text-align: center;">
+
+![width:1200px](img/contextwindow.drawio.svg?page=1)
+
+
+</div>
+
+---
+
+# Let's do everything live..... it's more exciting and what could go wrong?
 
 <!-- This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
 there are many others, and a lof of them have similer features.
@@ -62,11 +81,4 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
-# Context Window
-
-<div style="text-align: center;">
-
-![width:500px](img/contextwindow.drawio.svg?page=1&theme=dark)
-
-
-</div>
+# Questions?
