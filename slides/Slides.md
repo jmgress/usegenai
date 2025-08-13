@@ -153,6 +153,22 @@ Use the word "like" or "something like" when asking to adjust the results of a r
 
 ---
 
+# Normalizing
+
+> Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
+Original Updates:
+Improve customer experience
+Conduct Q3 market survey of 500 customers in North America
+Launch mobile app
+Update privacy policy to align with new GDPR changes
+Design wireframes for the new dashboard
+Enhance product quality
+Implement real-time chat support
+Finalize vendor contract for cloud hosting
+
+
+---
+
 
 # Contex Window
 
@@ -171,5 +187,34 @@ Use the word "like" or "something like" when asking to adjust the results of a r
 
 ---
 
+# Deep Research
+
+---
+
+# Agent Mode
+
+---
+
+# Canvas Mode
+
+---
+
+# Study
+
+---
+
+# Creating Projects
+
+---
+
+# Codex
+
+---
+
+# Chat Agents
+
+- ChatGPT agent helps you accomplish complex online tasks by reasoning, researching, and taking actions on your behalf. It can navigate websites, work with uploaded files, connect to third-party data sources (like email and document repositories), fill out forms, and edit spreadsheets—while ensuring you remain in control.
+
+---
 
 # Questions?
