@@ -26,11 +26,6 @@ Specialize in AI in the SDLD or TDLC
 
 # What Is Generative AI?
 
-- **Creates new content** instead of just finding existing info  
-- Examples: text, images, code, creative ideas  
-- **Pattern-based prediction**, not thinking or consciousness  
-- Uses **Large Language Models (LLMs)** trained on vast data to predict what comes next  
-
 
 **💡 Simple Analogy:**  
 Like a super-powered autocomplete — it’s read billions of examples, learned the patterns, and predicts the next word, pixel, or note until the work is complete.  

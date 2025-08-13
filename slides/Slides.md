@@ -33,7 +33,7 @@ AI" stands for Artificial Intelligence, which refers to the ability of a compute
 
 # What Is Generative AI?
 
-Generative AI is a type of artificial intelligence that creates new content like text, images, audio, and video in response to prompts. Unlike search engines that find and curate existing information, generative AI learns from data to produce novel outputs. 
+Generative AI is a type of artificial intelligence that creates new content like text, images, audio, and video in response to prompts. Unlike search engines that find and curate existing information, generative AI learns from data to produce new outputs. 
 
 
 ---
@@ -45,7 +45,7 @@ An LLM, or Large Language Model, is a type of artificial intelligence model trai
 ---
 
 
-# From Data to Intelligence: How AI Models Are Born
+# From Data to Intelligence: How LLM Models Are Born
 
 <div style="text-align: center;">
 
@@ -59,7 +59,7 @@ An LLM, or Large Language Model, is a type of artificial intelligence model trai
 
 ---
 
-# Models use a Contex Window
+# Models use a Context Window
 
 <div style="text-align: center;">
 
@@ -68,9 +68,26 @@ An LLM, or Large Language Model, is a type of artificial intelligence model trai
 
 </div>
 
+<!-- Typical ordering inside the context window
+System prompt – The hidden instructions from the platform or developer.
+Example: “You are ChatGPT, a large language model trained by OpenAI. Follow these guidelines…”
+Can also include special behavior rules, safety policies, or formatting requirements.
+Developer or application-specific instructions – Additional hidden setup from the app integrating the model.
+Example: “Always respond in JSON unless otherwise specified.”
+Conversation history – Your past messages + the model’s past responses.
+May be direct text or summaries if the history is long.
+Injected knowledge or retrieved content – Snippets from web search, databases, documents, or memory.
+Your latest prompt – The most recent user message. -->
+
+<!--
+System Prompts can vastly ajust the behavior, some issues in the past have been
+Google, Implicit prompt bias, with image generation
+Grok, Spreading extremist narratives
+OpenAI Sycophantic behavior -->
+
 ---
 
-# Let's do everything live..... it's more exciting and what could go wrong?
+# Let's do this live..... it's more exciting and what could go wrong?
 
 <!-- This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
 there are many others, and a lof of them have similer features.
@@ -90,6 +107,8 @@ type in "What are you?, "What are you?, How did you get created" -->
 - https://www.meta.ai/
 - https://grok.com/?referrer=website
 - https://chat.mistral.ai/chat
+
+<!-- https://www.genspark.ai/ -->
 
 ---
 
@@ -118,6 +137,7 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 **Takeaway**  
 > AI needs to be **helpful and truthful**—not just friendly.
+
 
 ---
 
@@ -148,6 +168,14 @@ Use the word "like" or "something like" when asking to adjust the results of a r
 
 ---
 
+# It's getting better at Math
+
+> What is 2 + 2?
+
+> How many days has it been since ChatGPT was launched?
+
+---
+
 # Normalizing
 
 > Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
@@ -165,7 +193,7 @@ Finalize vendor contract for cloud hosting
 ---
 
 
-# Contex Window
+# Context Window
 
 <div style="text-align: center;">
 
@@ -185,10 +213,26 @@ Finalize vendor contract for cloud hosting
 # Deep Research
 - Deep Research is a feature that uses multi-step reasoning and trusted sources to conduct thorough, accurate investigations on complex topics.
 
+> I’m preparing a 10-minute talk for small business owners on how AI can help them reduce operational costs without sacrificing quality.
+Please research trusted, recent sources (from the last 6 months) and:
+Identify the top 5 most impactful AI use cases for small businesses.
+Provide 2 real-world examples for each, including company names and outcomes.
+Highlight potential pitfalls or risks for each use case.
+Organize your findings in a clear table with citations.
+
+<!-- This works well because it forces Deep Research to:
+Pull from current, credible sources
+Perform multi-step reasoning (finding, comparing, summarizing)
+Give structured output that’s presentation-ready -->
+
+<!-- Also noticed that this triggers a message across to mobile devices that it has started -->
+
 ---
 
 # Agent Mode
 - Agent Mode is a ChatGPT capability that lets the AI act as a goal-oriented “agent,” able to plan, break down, and execute multi-step tasks by deciding which tools, data sources, and actions to use—often chaining them together—until it reaches your intended outcome.
+
+> Please find me a flight and hotel for my upcoming vacation to Denmark starting next week Wednesday returning in two weeks on Thursday. I would like the flight to direct and a hotel in Alborg on the fjord with a city view and walking distant to many restaurants.
 
 ---
 
@@ -215,6 +259,28 @@ Finalize vendor contract for cloud hosting
 # Chat Agents
 
 - ChatGPT agent helps you accomplish complex online tasks by reasoning, researching, and taking actions on your behalf. It can navigate websites, work with uploaded files, connect to third-party data sources (like email and document repositories), fill out forms, and edit spreadsheets—while ensuring you remain in control.
+
+---
+
+# Temporay Chat
+
+- Temporary Chat in ChatGPT is a conversation mode where the AI doesn’t retain any memory of what you say once the chat ends.
+- No long-term memory – nothing from the conversation is saved to your account’s history or the model’s memory.
+- Fresh context – every temporary chat starts with a blank slate, so past interactions won’t influence responses.
+- Privacy-focused – ideal for sensitive or one-off questions you don’t want tied to your ongoing chat history.
+> It’s essentially incognito mode for ChatGPT conversations.
+
+---
+
+# Turn an AI Paper into a podcast and now video
+
+- https://lmstudio.com
+
+---
+
+# Creating Presentations
+
+- https://gamma.app
 
 ---
 
