@@ -280,7 +280,7 @@ Give structured output that’s presentation-ready -->
 
 # Sam Altman – CEO of OpenAI
 
-## Questions was asked "What does my future look like?"
+## "What does my future look like?"
 
 > "There are sort of two views you can take.  
 > You can say, ‘Oh man, it’s doing everything I can do,’  
