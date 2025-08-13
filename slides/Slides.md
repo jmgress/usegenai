@@ -149,6 +149,27 @@ Use the word "like" or "something like" when asking to adjust the results of a r
 
 # Make it do some work for you.
 
+> I report to James Gress can you find information about him to understand his personality type and adjust the email to match.
+
 ---
+
+
+# Contex Window
+
+<div style="text-align: center;">
+
+![width:1200px](img/contextwindow.drawio.svg?page=1)
+
+
+</div>
+
+---
+
+# Memory 
+
+> Please remember that I like my emails to be professional.
+
+---
+
 
 # Questions?
