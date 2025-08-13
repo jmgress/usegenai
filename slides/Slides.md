@@ -105,11 +105,6 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
-
-# Watch out for Sycophancy
-
----
-
 # ⚠️ Watch Out for Sycophancy in AI
 
 **What Happened**  
