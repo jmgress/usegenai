@@ -189,19 +189,6 @@ Enhance product quality
 Implement real-time chat support
 Finalize vendor contract for cloud hosting
 
-
----
-
-
-# Context Window
-
-<div style="text-align: center;">
-
-![width:1200px](img/contextwindow.drawio.svg?page=1)
-
-
-</div>
-
 ---
 
 # Memory 
@@ -268,7 +255,7 @@ Give structured output that’s presentation-ready -->
 
 # Turn an AI Paper into a podcast and now video
 
-- https://lmstudio.com
+- https://notebooklm.google.com
 
 ---
 
