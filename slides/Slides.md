@@ -183,26 +183,32 @@ Finalize vendor contract for cloud hosting
 ---
 
 # Deep Research
+- Deep Research is a feature that uses multi-step reasoning and trusted sources to conduct thorough, accurate investigations on complex topics.
 
 ---
 
 # Agent Mode
+- Agent Mode is a ChatGPT capability that lets the AI act as a goal-oriented “agent,” able to plan, break down, and execute multi-step tasks by deciding which tools, data sources, and actions to use—often chaining them together—until it reaches your intended outcome.
 
 ---
 
 # Canvas Mode
+- Canvas is a collaborative editing space that opens alongside the chat so you and the AI can work together on longer-form content—like documents, code, or designs—in a structured, editable format.
 
 ---
 
 # Study
+- Study feature is like an interactive tutor mode—it helps you learn or review material step-by-step, adapting to your pace and preferred style.
 
 ---
 
 # Creating Projects
+- Projects is a feature that lets you create a dedicated workspace where the model can keep context, files, and instructions together for a specific goal or topic.
 
 ---
 
 # Codex
+- Codex feature in ChatGPT was the coding-focused experience powered by the Codex model, designed to help users write, understand, and debug code directly in the chat.
 
 ---
 
