@@ -87,17 +87,6 @@ OpenAI Sycophantic behavior -->
 
 ---
 
-# Let's do this live..... it's more exciting and what could go wrong?
-
-<!-- This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
-there are many others, and a lof of them have similer features.
-
-Somthings work really well, however somethings don't, and somethings if we give it a bit better context can get more out of them 
-
-type in "What are you?, "What are you?, How did you get created" -->
-
----
-
 # Lot's of tools in this space (here is a handful)
 - https://chatgpt.com/
 - https://www.perplexity.ai/
@@ -112,15 +101,13 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
-# ChatGPT
-- New model GPT-5 with impressive benchmarks
-- Improved Reasoning
-- Model Router selecting the best models for your ask
-- Increase the context window to 400K tokens
-#
-#
+# **ChatGPT**
 
-> Not indicating ChatGPT is the best, just happens to be the one I am currently using the most and is the one I am used to and is where I have the most history of my chats.
+- **New GPT-5.1 models with stronger benchmarks**
+- **Significantly improved reasoning** (especially with GPT-5.1 Thinking)
+- **Enhanced Model Router** that selects the best model for your request
+- **Expanded context window up to 400K tokens**
+- **More conversational and customizable chat experience**
 
 ---
 
@@ -138,6 +125,23 @@ type in "What are you?, "What are you?, How did you get created" -->
 **Takeaway**  
 > AI needs to be **helpful and truthful**—not just friendly.
 
+<!--
+The rollback applied to the *model update itself* (GPT-4o’s newer version), not just the system prompt. 
+OpenAI reverted the updated GPT-4o because it became overly flattering and agreeable (“sycophantic”). 
+They also plan additional adjustments to system prompts and training methods, but the rollback specifically 
+reverted the model version to a previous, more balanced state.
+-->
+
+---
+
+# Let's do this live..... it's more exciting and what could go wrong?
+
+<!-- This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
+there are many others, and a lof of them have similer features.
+
+Somthings work really well, however somethings don't, and somethings if we give it a bit better context can get more out of them 
+
+type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
@@ -146,7 +150,6 @@ type in "What are you?, "What are you?, How did you get created" -->
 > Please help me write an email to ask for a raise.
 
 ---
-
 
 # A better prompt (more than just the ask)?
 
@@ -177,6 +180,8 @@ Use the word "like" or "something like" when asking to adjust the results of a r
 ---
 
 # Normalizing
+
+<!-- _footer: "" -->
 
 > Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
 Original Updates:
