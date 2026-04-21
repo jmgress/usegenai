@@ -68,11 +68,11 @@ OpenAI Sycophantic behavior -->
 
 | Provider | Model | Strengths |
 |---|---|---|
-| **OpenAI** | GPT-5.1 | Balanced reasoning, strong tool use, large 400K context |
-| **Anthropic** | Claude Opus 4.5 | Deepest reasoning, long-form writing, agentic tasks |
-| **Anthropic** | Claude Sonnet 4.5 | Best everyday balance of speed & quality |
+| **OpenAI** | GPT-5.4 | Balanced reasoning, strong tool use, large 400K context |
+| **Anthropic** | Claude Opus 4.7 | Deepest reasoning, long-form writing, agentic tasks |
+| **Anthropic** | Claude Sonnet 4.6 | Best everyday balance of speed & quality |
 | **Anthropic** | Claude Haiku 4.5 | Fast, lightweight, cost-efficient |
-| **Google** | Gemini 2.5 Pro | Massive context, strong multimodal (image/video) |
+| **Google** | Gemini 3.1 | Massive context, strong multimodal (image/video) |
 | **xAI** | Grok 4 | Real-time X/web data, more candid tone |
 
 <!-- No single "best" model — pick based on the task:
