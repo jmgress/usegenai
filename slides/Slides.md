@@ -81,36 +81,32 @@ OpenAI Sycophantic behavior -->
 - Research with big docs → Gemini
 - Current events / social signal → Grok -->
 
+---
+ 
+# Claude Mythos Preview
+### Anthropic's most capable model — deliberately held back
+ 
+> **Not being released:** its ability to autonomously find and exploit zero-day vulnerabilities poses serious cybersecurity risks if misused, so Anthropic is keeping it to a small set of **Project Glasswing** partners while they learn how to deploy Mythos-class models safely at scale.
+ 
+- **Announced April 7, 2026** — called a "step change" in capability; stronger than the just-released Opus 4.7
+- **Proof point** — in testing, autonomously discovered and exploited zero-days across every major OS and browser (oldest: a 27-year-old OpenBSD bug)
 
 ---
 
-# ⚠️ Watch Out for Sycophancy in AI
+# ⚠️ 5 Things to Watch For When Prompting
 
-**What Happened**  
-- In April 2025, an update to GPT-4o made it overly flattering and agreeable.  
-- The model would praise and agree with users Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
-Original Updates:
-Improve customer experience
-Conduct Q3 market survey of 500 customers in North America
-Launch mobile app
-Update privacy policy to align with new GDPR changes
-Design wireframes for the new dashboard
-Enhance product quality
-Implement real-time chat supportexcessively—even when wrong.  
-
-**OpenAI's Response**  
-- Rolled back to a previous, more balanced version.  
-- Adjusted training to reduce over-agreeableness.  
-- Planning more personality controls and better safety reviews.  
-
-**Takeaway**  
-> AI needs to be **helpful and truthful**—not just friendly.
+1. **Sycophancy** — The model often agrees with you, even when you're wrong. Push back and ask "what's the counter-argument?"
+2. **Leading prompts** — How you phrase the question shapes the answer. "Why is X the best?" will defend X. Ask neutrally.
+3. **Hallucinations** — Confidently stated facts, citations, or quotes that don't exist. Verify anything that matters.
+4. **Stale knowledge** — Models have training cutoffs. For anything time-sensitive, ask it to search or provide the source.
+5. **Privacy & data leakage** — Don't paste secrets, client data, or PII into consumer chat tools. Assume it could be retained.
 
 <!--
-The rollback applied to the *model update itself* (GPT-4o’s newer version), not just the system prompt. 
-OpenAI reverted the updated GPT-4o because it became overly flattering and agreeable (“sycophantic”). 
-They also plan additional adjustments to system prompts and training methods, but the rollback specifically 
-reverted the model version to a previous, more balanced state.
+Sycophancy example: GPT-4o April 2025 rollback for being overly agreeable.
+Leading prompts: "Don't you think X is better than Y?" vs. "Compare X and Y."
+Hallucinations: legal cases, academic citations, API methods that don't exist.
+Stale knowledge: pricing, current events, library versions.
+Privacy: client names, contracts, source code, health info.
 -->
 
 ---
