@@ -3,59 +3,22 @@ marp: true
 theme: custom-default
 footer: 'James Gress | AI Director @ Accenture | https://jmgress.github.io/usegenai/'
 ---
-# Hype to Help: Demystifying AI for Everyday Impact
+# AI at Work and in Life (Opportunities to Optimize)
 
 ![bg right:40%](img/00-jamesgress.png)
 
 ## James Gress
-_Advanced Technology Center AI Lead Accenture_
+_AI Director Accenture_
 
 
 <i class="fa-brands fa-linkedin"></i> LinkedIn: [jamesgress](https://linkedin.com/in/jamesgress/)  
 <i class="fa-brands fa-github"></i> GitHub: [jmgress](https://github.com/jmgress)  
-<i class="fa-brands fa-x-twitter"></i> X.com: [@jmgress](https://x.com/jmgress)  
-<i class="fa-brands fa-meetup"></i> [Tampa Bay Generative AI Meetup](https://www.meetup.com/tampa-bay-generative-ai-meetup/)  
-<i class="fa-brands fa-meetup"></i> [Tampa Bay DevOps Meetup](https://www.meetup.com/tampa-devops-meetup/)
-<i class="fa-brands fa-meetup"></i> [Tampa Bay Platform Engineering Meetup](https://www.meetup.com/tampabayplatformengineering/)
+<i class="fa-brands fa-meetup"></i> [Tampa Bay Generative AI Meetup](https://www.meetup.com/tampa-bay-generative-ai-meetup/)
 <!-- 
 Done 100's of Prototypes
 Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems
 Specialize in AI in the SDLD or TDLC
 -->
-
----
-
-# What is AI?
-
-"AI" stands for Artificial Intelligence, which refers to the ability of a computer or machine to perform tasks that typically require human intelligence. These tasks can include learning, problem-solving, perception, and decision-making. AI is a broad field encompassing various techniques and approaches aimed at creating intelligent systems. 
-
----
-
-# What is Generative AI?
-
-Generative AI is a type of artificial intelligence that creates new content like text, images, audio, and video in response to prompts. Unlike search engines that find and curate existing information, generative AI learns from data to produce new outputs. 
-
-
----
-
-# What is a LLM (Large Language Model)
-
-An LLM, or Large Language Model, is a type of artificial intelligence model trained on massive amounts of text data to understand, generate, and manipulate human language. Essentially, it's a sophisticated computer program that can process and produce text in a way that mimics human communication. 
-
----
-
-
-# From Data to Intelligence: How LLM Models Are Born
-
-<div style="text-align: center;">
-
-![width:800px](img/buildingLLM.drawio.svg)
-
-
-</div>
-
-<!-- You have to watch out for this and check your work, it has told me things that didn't exist, just becuase of the way I worded it -->
-
 
 ---
 
@@ -115,7 +78,15 @@ OpenAI Sycophantic behavior -->
 
 **What Happened**  
 - In April 2025, an update to GPT-4o made it overly flattering and agreeable.  
-- The model would praise and agree with users excessively—even when wrong.  
+- The model would praise and agree with users Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
+Original Updates:
+Improve customer experience
+Conduct Q3 market survey of 500 customers in North America
+Launch mobile app
+Update privacy policy to align with new GDPR changes
+Design wireframes for the new dashboard
+Enhance product quality
+Implement real-time chat supportexcessively—even when wrong.  
 
 **OpenAI's Response**  
 - Rolled back to a previous, more balanced version.  
