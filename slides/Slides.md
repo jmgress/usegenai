@@ -93,21 +93,23 @@ OpenAI Sycophantic behavior -->
 
 ---
 
-# ⚠️ 5 Things to Watch For When Prompting
+# ⚠️ 5 Things to Watch For When Writing a Prompt
 
-1. **Sycophancy** — The model often agrees with you, even when you're wrong. Push back and ask "what's the counter-argument?"
-2. **Leading prompts** — How you phrase the question shapes the answer. "Why is X the best?" will defend X. Ask neutrally.
-3. **Hallucinations** — Confidently stated facts, citations, or quotes that don't exist. Verify anything that matters.
-4. **Stale knowledge** — Models have training cutoffs. For anything time-sensitive, ask it to search or provide the source.
+1. **Leading prompts** — How you phrase the question shapes the answer. "Why is X the best?" will defend X. Ask neutrally.
+2. **Anchoring with your draft** — If you share your plan or answer first, the model tends to build on it rather than challenge it. Ask for critique before revealing your version.
+3. **Forcing a format** — Demanding "5 bullets" or "a one-paragraph answer" can distort the content. Let the format fit the answer, not the other way around.
+4. **Under-specified context** — Missing the audience, goal, or constraints leads to generic output. Say who it's for, what it's for, and what "good" looks like.
 5. **Privacy & data leakage** — Don't paste secrets, client data, or PII into consumer chat tools. Assume it could be retained.
 
-<!--
-Sycophancy example: GPT-4o April 2025 rollback for being overly agreeable.
-Leading prompts: "Don't you think X is better than Y?" vs. "Compare X and Y."
-Hallucinations: legal cases, academic citations, API methods that don't exist.
-Stale knowledge: pricing, current events, library versions.
-Privacy: client names, contracts, source code, health info.
--->
+---
+
+# ⚠️ 5 Things to Watch For in the Response
+
+1. **Sycophancy** — The model often agrees with you, even when you're wrong. Push back and ask "what's the counter-argument?"
+2. **Confabulations** — Confidently stated facts, citations, or quotes that don't exist. Verify anything that matters.
+3. **Stale knowledge** — Models have training cutoffs. For anything time-sensitive, ask it to search or provide the source.
+4. **False precision** — Specific numbers, percentages, and statistics can sound authoritative but be invented. Treat any figure as a claim to verify.
+5. **Missing trade-offs** — Answers often arrive without the downsides. Ask "what are the trade-offs?" or "what would make this fail?"
 
 ---
 
@@ -119,6 +121,30 @@ there are many others, and a lof of them have similer features.
 Somthings work really well, however somethings don't, and somethings if we give it a bit better context can get more out of them 
 
 type in "What are you?, "What are you?, How did you get created" -->
+
+---
+
+# Claude Chat vs. Cowork
+
+**Chat** shows you how. **Cowork** does it for you.
+
+<style scoped>
+table { font-size: 0.85em; }
+th, td { padding: 0.3em 0.6em; }
+</style>
+
+| | Chat | Cowork |
+|---|---|---|
+| **Interaction** | Prompt & response | Goal & outcome |
+| **Files** | None | Read, edit, create |
+| **Apps** | Limited connectors | Gmail, Drive, Slack, Chrome |
+| **Autonomy** | Step-by-step | Multi-step execution |
+| **Platform** | Web, mobile, desktop | Desktop only |
+| **Plans** | Free + paid | Paid only |
+
+<!-- Example — opening 5 roles:
+Chat drafts the JDs you paste in.
+Cowork reads your inbox, pre-fills requests, and drafts JDs in the staffing tool. -->
 
 ---
 
