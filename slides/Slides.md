@@ -22,7 +22,7 @@ Specialize in AI in the SDLD or TDLC
 
 ---
 
-# Models use a Context Window
+# Context is Everything: Why the AI Seems to "Get" You
 
 <div style="text-align: center;">
 
