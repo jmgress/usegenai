@@ -64,13 +64,23 @@ OpenAI Sycophantic behavior -->
 
 ---
 
-# **ChatGPT**
+# Comparing Today's Top Models
 
-- **New GPT-5.1 models with stronger benchmarks**
-- **Significantly improved reasoning** (especially with GPT-5.1 Thinking)
-- **Enhanced Model Router** that selects the best model for your request
-- **Expanded context window up to 400K tokens**
-- **More conversational and customizable chat experience**
+| Provider | Model | Strengths |
+|---|---|---|
+| **OpenAI** | GPT-5.1 | Balanced reasoning, strong tool use, large 400K context |
+| **Anthropic** | Claude Opus 4.5 | Deepest reasoning, long-form writing, agentic tasks |
+| **Anthropic** | Claude Sonnet 4.5 | Best everyday balance of speed & quality |
+| **Anthropic** | Claude Haiku 4.5 | Fast, lightweight, cost-efficient |
+| **Google** | Gemini 2.5 Pro | Massive context, strong multimodal (image/video) |
+| **xAI** | Grok 4 | Real-time X/web data, more candid tone |
+
+<!-- No single "best" model — pick based on the task:
+- Reasoning-heavy work → Opus or GPT-5.1 Thinking
+- Fast drafting & chat → Sonnet or Haiku
+- Research with big docs → Gemini
+- Current events / social signal → Grok -->
+
 
 ---
 
