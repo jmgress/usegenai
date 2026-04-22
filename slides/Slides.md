@@ -22,6 +22,17 @@ Specialize in AI in the SDLD or TDLC
 
 ---
 
+# AI Grew Up Fast
+
+- **2023** — AI could **chat and write**. ChatGPT went mainstream: drafting emails, summarizing text, answering questions, and generating basic images.
+- **2024** — AI could **see, hear, and reason**. Multimodal models handled images, voice, and documents. Retrieval made answers grounded; coding assistants became everyday tools.
+- **2025** — AI could **act**. Agents planned multi-step tasks, used tools, browsed the web, and executed work across apps. Reasoning models closed the gap on hard problems.
+- **2026** — AI **works alongside us**. Desktop-level agents (Cowork, Agent Mode) read our files, manage our inboxes, and deliver finished outcomes — not just responses.
+
+> Three years ago it gave us answers. Today it gets things done.
+
+---
+
 # Context is Everything: Why the AI Seems to "Get" You
 
 <div style="text-align: center;">
@@ -133,24 +144,22 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
-# A simple question (the Task)?
+# Don't Overly Complicate Things
 
-> Create a presentation that explains the core components of a good prompt.
+You don't need a perfect prompt to get value.
+
+- **Start simple** — ask like you'd ask a smart coworker. Refine from there.
+- **Skip the "prompt engineering" rabbit hole** — most tasks don't need a 10-paragraph setup.
+- **Iterate, don't perfect** — a short follow-up beats a long rewrite.
+- **Use plain language** — no special syntax, no magic words.
+
+> If it takes longer to write the prompt than to do the task yourself, you're overthinking it.
 
 ---
 
-# Pin the Chat — or Start a Project
+# A simple question (the Task)?
 
-Once a conversation is going well, don't lose it.
-
-- **Pin the chat** — keep it at the top of your sidebar so you can return and continue with full context.
-- **Start a Project** — a dedicated workspace that holds instructions, files, and related chats together.
-
-**When to pin:** ongoing tasks, a thread you'll reference later, a "working session" you want to resume.
-
-**When to use a Project:** recurring work, shared context across multiple chats, or when you want the model to always follow the same ground rules (tone, audience, format).
-
-> Same model, same chat, richer context — better answers every time.
+> Create a presentation that explains the core components of a good prompt.
 
 ---
 
@@ -192,6 +201,21 @@ Voice turns dead time into productive time.
 
 ---
 
+# Pin the Chat — or Start a Project
+
+Once a conversation is going well, don't lose it.
+
+- **Pin the chat** — keep it at the top of your sidebar so you can return and continue with full context.
+- **Start a Project** — a dedicated workspace that holds instructions, files, and related chats together.
+
+**When to pin:** ongoing tasks, a thread you'll reference later, a "working session" you want to resume.
+
+**When to use a Project:** recurring work, shared context across multiple chats, or when you want the model to always follow the same ground rules (tone, audience, format).
+
+> Same model, same chat, richer context — better answers every time.
+
+---
+
 # It's getting better at Math
 
 > What is 2 + 2?
@@ -204,16 +228,7 @@ Voice turns dead time into productive time.
 
 <!-- _footer: "" -->
 
-> Help me create a status report, some team members gave very high-level updates while others gave very detailed ones. Please rewrite and group them so they are all at the same mid-level of detail, suitable for an executive audience.
-Original Updates:
-Improve customer experience
-Conduct Q3 market survey of 500 customers in North America
-Launch mobile app
-Update privacy policy to align with new GDPR changes
-Design wireframes for the new dashboard
-Enhance product quality
-Implement real-time chat support
-Finalize vendor contract for cloud hosting
+> You are a project manager that is an expert at writing reports at a leadership level, please take the attached status report and give me a rolled up status for an executive level report.  Some of the status are high level and some are very detailed and technical, please normalize and roll this up so that an c suite executive expects.
 
 ---
 
@@ -223,22 +238,8 @@ Finalize vendor contract for cloud hosting
 
 ---
 
-# Deep Research
-- Deep Research is a feature that uses multi-step reasoning and trusted sources to conduct thorough, accurate investigations on complex topics.
-
-> I’m preparing a 10-minute talk for small business owners on how AI can help them reduce operational costs without sacrificing quality.
-Please research trusted, recent sources (from the last 6 months) and:
-Identify the top 5 most impactful AI use cases for small businesses.
-Provide 2 real-world examples for each, including company names and outcomes.
-Highlight potential pitfalls or risks for each use case.
-Organize your findings in a clear table with citations.
-
-<!-- This works well because it forces Deep Research to:
-Pull from current, credible sources
-Perform multi-step reasoning (finding, comparing, summarizing)
-Give structured output that’s presentation-ready -->
-
-<!-- Also noticed that this triggers a message across to mobile devices that it has started -->
+# Creating Projects
+- Projects is a feature that lets you create a dedicated workspace where the model can keep context, files, and instructions together for a specific goal or topic.
 
 ---
 
@@ -271,11 +272,6 @@ Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the
 
 # Study
 - Study feature is like an interactive tutor mode—it helps you learn or review material step-by-step, adapting to your pace and preferred style.
-
----
-
-# Creating Projects
-- Projects is a feature that lets you create a dedicated workspace where the model can keep context, files, and instructions together for a specific goal or topic.
 
 ---
 
@@ -319,3 +315,26 @@ Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the
 ---
 
 # Questions?
+
+---
+
+# Appendix
+
+---
+
+# Deep Research
+- Deep Research is a feature that uses multi-step reasoning and trusted sources to conduct thorough, accurate investigations on complex topics.
+
+> I’m preparing a 10-minute talk for small business owners on how AI can help them reduce operational costs without sacrificing quality.
+Please research trusted, recent sources (from the last 6 months) and:
+Identify the top 5 most impactful AI use cases for small businesses.
+Provide 2 real-world examples for each, including company names and outcomes.
+Highlight potential pitfalls or risks for each use case.
+Organize your findings in a clear table with citations.
+
+<!-- This works well because it forces Deep Research to:
+Pull from current, credible sources
+Perform multi-step reasoning (finding, comparing, summarizing)
+Give structured output that’s presentation-ready -->
+
+<!-- Also noticed that this triggers a message across to mobile devices that it has started -->
