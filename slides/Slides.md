@@ -113,6 +113,15 @@ OpenAI Sycophantic behavior -->
 
 ---
 
+# Before We Go Live — A Few Caveats
+
+- **Audience first** — This is aimed at a **general audience**. There are more technical ways to do every one of these things; we're keeping it approachable.
+- **Not exhaustive** — New features ship **daily**. There's no way to cover everything, and some of what I show will be outdated soon.
+- **My way, not the only way** — These are patterns **I use**. Your workflow may look different, and that's fine.
+- **Things will go sideways** — That's part of the fun. When something doesn't work, it's a chance to see how to recover.
+
+---
+
 # Let's do this live..... it's more exciting and what could go wrong?
 
 <!-- This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
