@@ -124,30 +124,6 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 ---
 
-# Claude Chat vs. Cowork
-
-**Chat** shows you how. **Cowork** does it for you.
-
-<style scoped>
-table { font-size: 0.85em; }
-th, td { padding: 0.3em 0.6em; }
-</style>
-
-| | Chat | Cowork |
-|---|---|---|
-| **Interaction** | Prompt & response | Goal & outcome |
-| **Files** | None | Read, edit, create |
-| **Apps** | Limited connectors | Gmail, Drive, Slack, Chrome |
-| **Autonomy** | Step-by-step | Multi-step execution |
-| **Platform** | Web, mobile, desktop | Desktop only |
-| **Plans** | Free + paid | Paid only |
-
-<!-- Example — opening 5 roles:
-Chat drafts the JDs you paste in.
-Cowork reads your inbox, pre-fills requests, and drafts JDs in the staffing tool. -->
-
----
-
 # A simple question (the Task)?
 
 > Please help me write an email to ask for a raise.
@@ -228,6 +204,21 @@ Give structured output that’s presentation-ready -->
 - Agent Mode is a ChatGPT capability that lets the AI act as a goal-oriented “agent,” able to plan, break down, and execute multi-step tasks by deciding which tools, data sources, and actions to use—often chaining them together—until it reaches your intended outcome.
 
 > Please find me a flight and hotel for my upcoming vacation to Denmark starting next week Wednesday returning in two weeks on Thursday. I would like the flight to direct and a hotel in Alborg on the fjord with a city view and walking distant to many restaurants.
+
+---
+
+# Claude Cowork
+
+**Cowork** is Claude's agentic desktop experience — you give it a goal, and it does the work for you across your apps.
+
+- **Goal & outcome** — describe what you want done, not each step
+- **Works with your files** — read, edit, and create directly on your machine
+- **Deep app integration** — Gmail, Drive, Slack, Chrome
+- **Multi-step execution** — plans and chains actions to completion
+- **Desktop app, paid plans only**
+
+<!-- Example — opening 5 roles:
+Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the staffing tool. -->
 
 ---
 
