@@ -135,27 +135,60 @@ type in "What are you?, "What are you?, How did you get created" -->
 
 # A simple question (the Task)?
 
-> Please help me write an email to ask for a raise.
+> Create a presentation that explains the core components of a good prompt.
 
 ---
 
-# A better prompt (more than just the ask)?
+# Pin the Chat — or Start a Project
 
-> You are an expert at writing emails and asking for a raise.  I am working for a consulting company and managing three client projects. Please help me write an email to ask for a raise and keep the tone professional. 
+Once a conversation is going well, don't lose it.
+
+- **Pin the chat** — keep it at the top of your sidebar so you can return and continue with full context.
+- **Start a Project** — a dedicated workspace that holds instructions, files, and related chats together.
+
+**When to pin:** ongoing tasks, a thread you'll reference later, a "working session" you want to resume.
+
+**When to use a Project:** recurring work, shared context across multiple chats, or when you want the model to always follow the same ground rules (tone, audience, format).
+
+> Same model, same chat, richer context — better answers every time.
 
 ---
 
-# Be careful on how you ask
+# The Claude Sidebar — What You're Seeing
 
-Use the word "like" or "something like" when asking to adjust the results of a response.
+A quick tour of the top-left navigation:
 
-> Please add something like, I have enabled and trained other in how to incorprate AI into their work process to allign the team to be more productive. 
+- **New chat** — Start a fresh conversation with no prior context.
+- **Projects** — A dedicated workspace that holds files, instructions, and related chats together so Claude stays on the same page across sessions.
+- **Artifacts** — Longer-form outputs (documents, code, slides, diagrams) that open in a side panel you can edit alongside the chat.
+- **Ask your org** — Search and draw on your organization's shared knowledge — connected docs, wikis, and approved sources.
+- **Customize** — Set your preferences, personality, and default instructions so every new chat starts the way you like.
 
 ---
 
-# Make it do some work for you.
+# Pick a Mode — Steer Claude Before You Start
 
-> I report to James Gress can you find information about him to understand his personality type and adjust the email to match.
+Buttons above the chat box tune Claude for the kind of task you're doing:
+
+- **Write** — Optimized for drafting and editing: emails, docs, posts, marketing copy.
+- **Learn** — Tutor-style responses that explain step-by-step, check understanding, and adapt to your level.
+- **Code** — Focused on engineering tasks: writing, explaining, debugging, and reviewing code.
+- **Career chat** — Career-specific coaching: resumes, interviews, job search, professional growth.
+- **Claude Choose** — Let Claude pick the best mode based on what you ask.
+
+> Same model underneath — different default instructions so the response fits the task.
+
+---
+
+# Use Voice — Think Out Loud, Get Work Done
+
+Voice turns dead time into productive time.
+
+- **Hands-free, eyes-free** — works on your commute, walk, or while doing chores
+- **Lower friction** — it's easier to talk through an idea than to type it
+- **Great for drafts and outlines** — let the model capture your thinking, clean it up later
+
+> **Real example:** On my drive to and from work, I talked through the ideas for *this* presentation. Claude turned that rambling into a clean outline — and that outline became the slides you're looking at now.
 
 ---
 
