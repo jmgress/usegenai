@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI at Work and in Life (Opportunities to Optimize)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/deck.css">
+</head>
+<body>
+
+<div id="stage">
+
+<!-- 1 -->
+<section class="slide title-slide">
+  <img class="bg-image" src="img/00-jamesgress.png" alt="">
+  <div class="slide-content">
+    <h1>AI at Work and in Life (Opportunities to Optimize)</h1>
+    <h2>James Gress</h2>
+    <h3><em>AI Director Accenture</em></h3>
+    <p>
+      <i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/jamesgress/">jamesgress</a><br>
+      <i class="fa-brands fa-github"></i> GitHub: <a href="https://github.com/jmgress">jmgress</a><br>
+      <i class="fa-brands fa-meetup"></i> <a href="https://www.meetup.com/tampa-bay-generative-ai-meetup/">Tampa Bay Generative AI Meetup</a>
+    </p>
+  </div>
+  <aside class="notes">
+Done 100's of Prototypes
+Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems
+Specialize in AI in the SDLD or TDLC
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h1>AI Grew Up Fast</h1>
+  <ul>
+    <li><strong>2023</strong> — AI could <strong>chat and write</strong>. ChatGPT went mainstream: drafting emails, summarizing text, answering questions, and generating basic images.</li>
+    <li><strong>2024</strong> — AI could <strong>see, hear, and reason</strong>. Multimodal models handled images, voice, and documents. Retrieval made answers grounded; coding assistants became everyday tools.</li>
+    <li><strong>2025</strong> — AI could <strong>act</strong>. Agents planned multi-step tasks, used tools, browsed the web, and executed work across apps. Reasoning models closed the gap on hard problems.</li>
+    <li><strong>2026</strong> — AI <strong>works alongside us</strong>. Desktop-level agents (Cowork, Agent Mode) read our files, manage our inboxes, and deliver finished outcomes — not just responses.</li>
+  </ul>
+  <blockquote>Three years ago it gave us answers. Today it gets things done.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h1>Context is Everything: Why the AI Seems to &ldquo;Get&rdquo; You</h1>
+  <img class="centered-image" data-center src="img/contextwindow.drawio.svg" alt="Context window ordering diagram">
+  <aside class="notes">
+Typical ordering inside the context window
+System prompt – The hidden instructions from the platform or developer.
+Example: “You are ChatGPT, a large language model trained by OpenAI. Follow these guidelines…”
+Can also include special behavior rules, safety policies, or formatting requirements.
+Developer or application-specific instructions – Additional hidden setup from the app integrating the model.
+Example: “Always respond in JSON unless otherwise specified.”
+Conversation history – Your past messages + the model’s past responses.
+May be direct text or summaries if the history is long.
+Injected knowledge or retrieved content – Snippets from web search, databases, documents, or memory.
+Your latest prompt – The most recent user message.
+
+System Prompts can vastly ajust the behavior, some issues in the past have been
+Google, Implicit prompt bias, with image generation
+Grok, Spreading extremist narratives
+OpenAI Sycophantic behavior
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h1>Lot's of tools in this space (here is a handful)</h1>
+  <ul>
+    <li><a href="https://chatgpt.com/">https://chatgpt.com/</a></li>
+    <li><a href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></li>
+    <li><a href="https://claude.ai/">https://claude.ai/</a></li>
+    <li><a href="https://copilot.microsoft.com/chats/">https://copilot.microsoft.com/chats/</a></li>
+    <li><a href="https://gemini.google.com/app">https://gemini.google.com/app</a></li>
+    <li><a href="https://www.meta.ai/">https://www.meta.ai/</a></li>
+    <li><a href="https://grok.com/">https://grok.com/</a></li>
+    <li><a href="https://chat.mistral.ai/chat">https://chat.mistral.ai/chat</a></li>
+  </ul>
+  <aside class="notes">
+https://www.genspark.ai/
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h1>Comparing Today's Top Models</h1>
+  <table>
+    <thead>
+      <tr><th>Provider</th><th>Model</th><th>Strengths</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>OpenAI</strong></td><td>GPT-5.4</td><td>Balanced reasoning, strong tool use, large 400K context</td></tr>
+      <tr><td><strong>Anthropic</strong></td><td>Claude Opus 4.7</td><td>Deepest reasoning, long-form writing, agentic tasks</td></tr>
+      <tr><td><strong>Anthropic</strong></td><td>Claude Sonnet 4.6</td><td>Best everyday balance of speed &amp; quality</td></tr>
+      <tr><td><strong>Anthropic</strong></td><td>Claude Haiku 4.5</td><td>Fast, lightweight, cost-efficient</td></tr>
+      <tr><td><strong>Google</strong></td><td>Gemini 3.1</td><td>Massive context, strong multimodal (image/video)</td></tr>
+      <tr><td><strong>xAI</strong></td><td>Grok 4</td><td>Real-time X/web data, more candid tone</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">
+No single "best" model — pick based on the task:
+- Reasoning-heavy work → Opus or GPT-5.1 Thinking
+- Fast drafting &amp; chat → Sonnet or Haiku
+- Research with big docs → Gemini
+- Current events / social signal → Grok
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h1>Claude Mythos Preview</h1>
+  <h3>Anthropic's most capable model — deliberately held back</h3>
+  <blockquote><strong>Not being released:</strong> its ability to autonomously find and exploit zero-day vulnerabilities poses serious cybersecurity risks if misused, so Anthropic is keeping it to a small set of <strong>Project Glasswing</strong> partners while they learn how to deploy Mythos-class models safely at scale.</blockquote>
+  <ul>
+    <li><strong>Announced April 7, 2026</strong> — called a "step change" in capability; stronger than the just-released Opus 4.7</li>
+    <li><strong>Proof point</strong> — in testing, autonomously discovered and exploited zero-days across every major OS and browser (oldest: a 27-year-old OpenBSD bug)</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h1>⚠️ 5 Things to Watch For When Writing a Prompt</h1>
+  <ol>
+    <li><strong>Leading prompts</strong> — How you phrase the question shapes the answer. "Why is X the best?" will defend X. Ask neutrally.</li>
+    <li><strong>Anchoring with your draft</strong> — If you share your plan or answer first, the model tends to build on it rather than challenge it. Ask for critique before revealing your version.</li>
+    <li><strong>Forcing a format</strong> — Demanding "5 bullets" or "a one-paragraph answer" can distort the content. Let the format fit the answer, not the other way around.</li>
+    <li><strong>Under-specified context</strong> — Missing the audience, goal, or constraints leads to generic output. Say who it's for, what it's for, and what "good" looks like.</li>
+    <li><strong>Privacy &amp; data leakage</strong> — Don't paste secrets, client data, or PII into consumer chat tools. Assume it could be retained.</li>
+  </ol>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h1>⚠️ 5 Things to Watch For in the Response</h1>
+  <ol>
+    <li><strong>Sycophancy</strong> — The model often agrees with you, even when you're wrong. Push back and ask "what's the counter-argument?"</li>
+    <li><strong>Confabulations</strong> — Confidently stated facts, citations, or quotes that don't exist. Verify anything that matters.</li>
+    <li><strong>Stale knowledge</strong> — Models have training cutoffs. For anything time-sensitive, ask it to search or provide the source.</li>
+    <li><strong>False precision</strong> — Specific numbers, percentages, and statistics can sound authoritative but be invented. Treat any figure as a claim to verify.</li>
+    <li><strong>Missing trade-offs</strong> — Answers often arrive without the downsides. Ask "what are the trade-offs?" or "what would make this fail?"</li>
+  </ol>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h1>Before We Go Live — A Few Caveats</h1>
+  <ul>
+    <li><strong>Audience first</strong> — This is aimed at a <strong>general audience</strong>. There are more technical ways to do every one of these things; we're keeping it approachable.</li>
+    <li><strong>Not exhaustive</strong> — New features ship <strong>daily</strong>. There's no way to cover everything, and some of what I show will be outdated soon.</li>
+    <li><strong>My way, not the only way</strong> — These are patterns <strong>I use</strong>. Your workflow may look different, and that's fine.</li>
+    <li><strong>Things will go sideways</strong> — That's part of the fun. When something doesn't work, it's a chance to see how to recover.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h1>Let's do this live..... it's more exciting and what could go wrong?</h1>
+  <aside class="notes">
+This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
+there are many others, and a lof of them have similer features.
+
+Somthings work really well, however somethings don't, and somethings if we give it a bit better context can get more out of them
+
+type in "What are you?, "What are you?, How did you get created"
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h1>Don't Overly Complicate Things</h1>
+  <p>You don't need a perfect prompt to get value.</p>
+  <ul>
+    <li><strong>Start simple</strong> — ask like you'd ask a smart coworker. Refine from there.</li>
+    <li><strong>Skip the "prompt engineering" rabbit hole</strong> — most tasks don't need a 10-paragraph setup.</li>
+    <li><strong>Iterate, don't perfect</strong> — a short follow-up beats a long rewrite.</li>
+    <li><strong>Use plain language</strong> — no special syntax, no magic words.</li>
+  </ul>
+  <blockquote>If it takes longer to write the prompt than to do the task yourself, you're overthinking it.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <h1>A simple question (the Task)?</h1>
+  <blockquote>Create a presentation that explains the core components of a good prompt.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <h1>The Claude Sidebar — What You're Seeing</h1>
+  <p>A quick tour of the top-left navigation:</p>
+  <ul>
+    <li><strong>New chat</strong> — Start a fresh conversation with no prior context.</li>
+    <li><strong>Projects</strong> — A dedicated workspace that holds files, instructions, and related chats together so Claude stays on the same page across sessions.</li>
+    <li><strong>Artifacts</strong> — Longer-form outputs (documents, code, slides, diagrams) that open in a side panel you can edit alongside the chat.</li>
+    <li><strong>Ask your org</strong> — Search and draw on your organization's shared knowledge — connected docs, wikis, and approved sources.</li>
+    <li><strong>Customize</strong> — Set your preferences, personality, and default instructions so every new chat starts the way you like.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <h1>Pick a Mode — Steer Claude Before You Start</h1>
+  <p>Buttons above the chat box tune Claude for the kind of task you're doing:</p>
+  <ul>
+    <li><strong>Write</strong> — Optimized for drafting and editing: emails, docs, posts, marketing copy.</li>
+    <li><strong>Learn</strong> — Tutor-style responses that explain step-by-step, check understanding, and adapt to your level.</li>
+    <li><strong>Code</strong> — Focused on engineering tasks: writing, explaining, debugging, and reviewing code.</li>
+    <li><strong>Career chat</strong> — Career-specific coaching: resumes, interviews, job search, professional growth.</li>
+    <li><strong>Claude Choose</strong> — Let Claude pick the best mode based on what you ask.</li>
+  </ul>
+  <blockquote>Same model underneath — different default instructions so the response fits the task.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <h1>Use Voice — Think Out Loud, Get Work Done</h1>
+  <p>Voice turns dead time into productive time.</p>
+  <ul>
+    <li><strong>Hands-free, eyes-free</strong> — works on your commute, walk, or while doing chores</li>
+    <li><strong>Lower friction</strong> — it's easier to talk through an idea than to type it</li>
+    <li><strong>Great for drafts and outlines</strong> — let the model capture your thinking, clean it up later</li>
+  </ul>
+  <blockquote><strong>Real example:</strong> On my drive to and from work, I talked through the ideas for <em>this</em> presentation. Claude turned that rambling into a clean outline — and that outline became the slides you're looking at now.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 16 -->
+<section class="slide">
+  <h1>Pin the Chat — or Start a Project</h1>
+  <p>Once a conversation is going well, don't lose it.</p>
+  <ul>
+    <li><strong>Pin the chat</strong> — keep it at the top of your sidebar so you can return and continue with full context.</li>
+    <li><strong>Start a Project</strong> — a dedicated workspace that holds instructions, files, and related chats together.</li>
+  </ul>
+  <p><strong>When to pin:</strong> ongoing tasks, a thread you'll reference later, a "working session" you want to resume.</p>
+  <p><strong>When to use a Project:</strong> recurring work, shared context across multiple chats, or when you want the model to always follow the same ground rules (tone, audience, format).</p>
+  <blockquote>Same model, same chat, richer context — better answers every time.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 17 -->
+<section class="slide">
+  <h1>It's getting better at Math</h1>
+  <blockquote>What is 2 + 2?</blockquote>
+  <blockquote>How many days has it been since ChatGPT was launched?</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 18 -->
+<section class="slide no-footer">
+  <h1>Normalizing</h1>
+  <blockquote>You are a project manager that is an expert at writing reports at a leadership level, please take the attached status report and give me a rolled up status for an executive level report. Some of the status are high level and some are very detailed and technical, please normalize and roll this up so that an c suite executive expects.</blockquote>
+  <div class="slide-footer"></div>
+</section>
+
+<!-- 19 -->
+<section class="slide">
+  <h1>Memory</h1>
+  <blockquote>Please remember that I like my emails to be professional.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 20 -->
+<section class="slide">
+  <h1>Creating Projects</h1>
+  <ul>
+    <li>Projects is a feature that lets you create a dedicated workspace where the model can keep context, files, and instructions together for a specific goal or topic.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 21 -->
+<section class="slide">
+  <h1>Agent Mode</h1>
+  <ul>
+    <li>Agent Mode is a ChatGPT capability that lets the AI act as a goal-oriented “agent,” able to plan, break down, and execute multi-step tasks by deciding which tools, data sources, and actions to use—often chaining them together—until it reaches your intended outcome.</li>
+  </ul>
+  <blockquote>Please find me a flight and hotel for my upcoming vacation to Denmark starting next week Wednesday returning in two weeks on Thursday. I would like the flight to direct and a hotel in Alborg on the fjord with a city view and walking distant to many restaurants.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 22 -->
+<section class="slide">
+  <h1>Claude Cowork</h1>
+  <p><strong>Cowork</strong> is Claude's agentic desktop experience — you give it a goal, and it does the work for you across your apps.</p>
+  <ul>
+    <li><strong>Goal &amp; outcome</strong> — describe what you want done, not each step</li>
+    <li><strong>Works with your files</strong> — read, edit, and create directly on your machine</li>
+    <li><strong>Deep app integration</strong> — Gmail, Drive, Slack, Chrome</li>
+    <li><strong>Multi-step execution</strong> — plans and chains actions to completion</li>
+    <li><strong>Desktop app, paid plans only</strong></li>
+  </ul>
+  <aside class="notes">
+Example — opening 5 roles:
+Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the staffing tool.
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 23 -->
+<section class="slide">
+  <h1>Canvas Mode</h1>
+  <ul>
+    <li>Canvas is a collaborative editing space that opens alongside the chat so you and the AI can work together on longer-form content—like documents, code, or designs—in a structured, editable format.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 24 -->
+<section class="slide">
+  <h1>Study</h1>
+  <ul>
+    <li>Study feature is like an interactive tutor mode—it helps you learn or review material step-by-step, adapting to your pace and preferred style.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 25 -->
+<section class="slide">
+  <h1>Codex</h1>
+  <ul>
+    <li>Codex feature in ChatGPT was the coding-focused experience powered by the Codex model, designed to help users write, understand, and debug code directly in the chat.</li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 26 -->
+<section class="slide">
+  <h1>Temporay Chat</h1>
+  <ul>
+    <li>Temporary Chat in ChatGPT is a conversation mode where the AI doesn’t retain any memory of what you say once the chat ends.</li>
+    <li><strong>No long-term memory</strong> – nothing from the conversation is saved to your account’s history or the model’s memory.</li>
+    <li><strong>Fresh context</strong> – every temporary chat starts with a blank slate, so past interactions won’t influence responses.</li>
+    <li><strong>Privacy-focused</strong> – ideal for sensitive or one-off questions you don’t want tied to your ongoing chat history.</li>
+  </ul>
+  <blockquote>It’s essentially incognito mode for ChatGPT conversations.</blockquote>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 27 -->
+<section class="slide">
+  <h1>Turn an AI Paper into a podcast and now video</h1>
+  <ul>
+    <li><a href="https://notebooklm.google.com">https://notebooklm.google.com</a></li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 28 -->
+<section class="slide">
+  <h1>Creating Presentations</h1>
+  <ul>
+    <li><a href="https://gamma.app">https://gamma.app</a></li>
+  </ul>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 29 -->
+<section class="slide">
+  <h1>Sam Altman – CEO of OpenAI</h1>
+  <h2>"What does my future look like?"</h2>
+  <blockquote>
+    "There are sort of two views you can take.<br>
+    You can say, ‘Oh man, it’s doing everything I can do,’<br>
+    or you can say, ‘Look at all the new things I can now do.’"
+  </blockquote>
+  <p>— <strong>April 2025</strong></p>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 30 -->
+<section class="slide">
+  <h1>Questions?</h1>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 31 -->
+<section class="slide">
+  <h1>Appendix</h1>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+<!-- 32 -->
+<section class="slide">
+  <h1>Deep Research</h1>
+  <ul>
+    <li>Deep Research is a feature that uses multi-step reasoning and trusted sources to conduct thorough, accurate investigations on complex topics.</li>
+  </ul>
+  <blockquote>
+    I’m preparing a 10-minute talk for small business owners on how AI can help them reduce operational costs without sacrificing quality.
+    Please research trusted, recent sources (from the last 6 months) and:
+    Identify the top 5 most impactful AI use cases for small businesses.
+    Provide 2 real-world examples for each, including company names and outcomes.
+    Highlight potential pitfalls or risks for each use case.
+    Organize your findings in a clear table with citations.
+  </blockquote>
+  <aside class="notes">
+This works well because it forces Deep Research to:
+Pull from current, credible sources
+Perform multi-step reasoning (finding, comparing, summarizing)
+Give structured output that’s presentation-ready
+
+Also noticed that this triggers a message across to mobile devices that it has started
+  </aside>
+  <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
+</section>
+
+</div><!-- /#stage -->
+
+<div id="progress-bar"></div>
+<div id="slide-counter">1 / 32</div>
+<div class="hint">← → nav · S notes · O overview · F fullscreen</div>
+
+<div id="notes-overlay"></div>
+<div id="overview"></div>
+
+<script src="js/deck.js"></script>
+</body>
+</html>
