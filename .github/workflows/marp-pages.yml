@@ -1,4 +1,4 @@
-name: Deploy marp site to Pages
+name: Deploy slides to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -26,22 +26,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Copy images
-        run: mkdir build && cp -R slides/img build/img && cp -R slides/themes build/themes
-
-      - name: Marp Build (README)
-        uses: docker://marpteam/marp-cli:latest
-        with:
-          args: --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
-        env:
-          MARP_USER: root:root
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Upload entire repository
-          path: 'build'
+          # Publish the static slide deck as-is (index.html at the root)
+          path: 'slides'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
