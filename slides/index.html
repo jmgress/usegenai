@@ -143,25 +143,7 @@ html, body {
 .slide.no-footer .slide-footer { display: none; }
 
 #progress-bar { position: fixed; top: 0; left: 0; z-index: 50; height: 4px; background: var(--gradient); transition: width 0.2s ease; }
-#deck-nav { position: fixed; right: 18px; bottom: 12px; z-index: 50; display: flex; align-items: center; gap: 10px; }
-#deck-nav-buttons { display: flex; align-items: center; gap: 8px; }
-#slide-counter { color: var(--muted); font-family: var(--mono-font); font-size: 13px; }
-.nav-button {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--fg);
-  font: inherit;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-.nav-button:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--accent); }
-.nav-button:disabled { opacity: 0.35; cursor: default; }
-body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
+#slide-counter { position: fixed; right: 18px; bottom: 12px; z-index: 50; color: var(--muted); font-family: var(--mono-font); font-size: 13px; }
 #notes-overlay { position: fixed; inset: 0; z-index: 60; display: none; padding: 60px 100px; overflow: auto; background: rgba(5, 8, 22, 0.96); color: var(--fg); font-size: 22px; line-height: 1.6; white-space: pre-wrap; }
 #notes-overlay.visible { display: block; }
 #notes-overlay h2 { margin-top: 0; color: var(--accent-2); }
@@ -553,13 +535,7 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
 </div><!-- /#deck -->
 
 <div id="progress-bar"></div>
-<div id="deck-nav">
-  <div id="deck-nav-buttons" aria-label="Slide navigation">
-    <button id="prev-button" class="nav-button" type="button" aria-label="Previous slide">‹</button>
-    <button id="next-button" class="nav-button" type="button" aria-label="Next slide">›</button>
-  </div>
-  <div id="slide-counter">1 / 32</div>
-</div>
+<div id="slide-counter">1 / 32</div>
 <div class="hint">← → nav · S notes · O overview · F fullscreen</div>
 
 <div id="notes-overlay"></div>
@@ -575,8 +551,6 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
   var stage = document.getElementById("deck");
   var progressBar = document.getElementById("progress-bar");
   var counter = document.getElementById("slide-counter");
-  var prevButton = document.getElementById("prev-button");
-  var nextButton = document.getElementById("next-button");
   var notesOverlay = document.getElementById("notes-overlay");
   var overview = document.getElementById("overview");
 
@@ -598,22 +572,12 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
     renderNotes();
   }
 
-  function updateOverlayState() {
-    document.body.classList.toggle(
-      "overlay-open",
-      notesOverlay.classList.contains("visible") || overview.classList.contains("visible")
-    );
-  }
-
   function updateChrome() {
     slides.forEach(function (slide, index) {
       slide.classList.toggle("active", index === current);
     });
     if (progressBar) progressBar.style.width = ((current + 1) / total) * 100 + "%";
     if (counter) counter.textContent = (current + 1) + " / " + total;
-    if (prevButton) prevButton.disabled = current === 0;
-    if (nextButton) nextButton.disabled = current === total - 1;
-    updateOverlayState();
     updateNotes();
   }
 
@@ -640,7 +604,6 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
 
   function toggleNotes() {
     notesOverlay.classList.toggle("visible");
-    updateOverlayState();
     if (notesOverlay.classList.contains("visible")) renderNotes();
   }
 
@@ -677,7 +640,6 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
     var show = typeof force === "boolean" ? force : !overview.classList.contains("visible");
     if (show) buildOverview();
     overview.classList.toggle("visible", show);
-    updateOverlayState();
   }
 
   function scaleStage() {
@@ -727,9 +689,6 @@ body.overlay-open #deck-nav-buttons { opacity: 0; pointer-events: none; }
         break;
     }
   });
-
-  if (prevButton) prevButton.addEventListener("click", previous);
-  if (nextButton) nextButton.addEventListener("click", next);
 
   var touchStartX = null;
   document.addEventListener("touchstart", function (event) {
