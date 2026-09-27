@@ -4,31 +4,176 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI at Work and in Life (Opportunities to Optimize)</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="css/deck.css">
+<style>
+:root {
+  --bg: #0a1228;
+  --bg-deep: #050816;
+  --fg: #e8eefc;
+  --muted: #93a4c8;
+  --accent: #60a5fa;
+  --accent-2: #93c5fd;
+  --good: #34d399;
+  --amber: #fbbf24;
+  --bad: #f87171;
+  --purple: #a78bfa;
+  --card: rgba(15, 26, 58, 0.6);
+  --card-solid: #0f1a3a;
+  --border: rgba(99, 145, 255, 0.12);
+  --border-strong: rgba(99, 145, 255, 0.22);
+  --code-bg: rgba(8, 15, 35, 0.72);
+  --code-border: rgba(99, 145, 255, 0.18);
+  --slide-pad: 34px;
+  --base-font: 24px;
+  --ui-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono-font: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --slide-w: 1280px;
+  --slide-h: 720px;
+  --gradient: linear-gradient(90deg, var(--accent), var(--accent-2) 55%, var(--purple));
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-deep);
+  color: var(--fg);
+  font-family: var(--ui-font);
+}
+
+#deck {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  transform-origin: center center;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  padding: 64px 88px 88px;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(96, 165, 250, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(167, 139, 250,  0.11), transparent 60%),
+    linear-gradient(135deg, var(--bg), var(--bg-deep));
+}
+
+.slide.active { display: flex; }
+.slide h1 { margin: 0 0 28px; color: var(--fg); font-size: 2em; line-height: 1.15; font-weight: 800; }
+.slide h2 { margin: 0 0 20px; color: var(--accent); font-size: 28px; font-weight: 700; }
+.slide h3 { margin: 0 0 16px; color: var(--accent-2); font-size: 20px; font-weight: 600; }
+.slide p { color: var(--fg); font-size: 20px; line-height: 1.5; }
+.slide ul, .slide ol { padding-left: 1.2em; font-size: 20px; line-height: 1.48; }
+.slide li { margin-bottom: 9px; }
+.slide li strong, .slide strong { color: var(--fg); }
+.slide em { color: var(--muted); }
+.slide a { color: var(--accent-2); text-decoration: none; }
+.slide a:hover { text-decoration: underline; }
+.slide hr { height: 3px; margin: 20px 0; border: 0; border-radius: 3px; background: var(--gradient); }
+
+.slide blockquote, .quote {
+  margin: 20px 0;
+  padding: 18px 24px;
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--fg);
+  font-family: var(--mono-font);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.slide blockquote p { margin: 0; font-family: var(--mono-font); font-size: 17px; }
+
+.slide table { width: 100%; margin-top: 12px; border-collapse: collapse; font-size: 17px; }
+.slide th, .slide td { padding: 10px 14px; border-bottom: 1px solid var(--border-strong); text-align: left; }
+.slide th { color: var(--accent-2); font-size: 13px; text-transform: uppercase; }
+.slide tbody tr:nth-child(even) { background: rgba(15, 26, 58, 0.42); }
+
+.columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.columns3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.center { align-items: center; text-align: center; }
+.card { padding: 20px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--card); }
+.card.good { border-top: 3px solid var(--good); }
+.card.bad { border-top: 3px solid var(--bad); }
+.card.warn { border-top: 3px solid var(--amber); }
+.card.info { border-top: 3px solid var(--accent); }
+.card-title { margin: 0 0 10px; color: var(--accent-2); font-weight: 700; }
+.chip, .pill { display: inline-block; padding: 4px 9px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--accent-2); font-size: 14px; }
+.chip.green { color: var(--good); }
+.chip.amber { color: var(--amber); }
+.chip.red { color: var(--bad); }
+.chip.purple { color: var(--purple); }
+.chip.blue, .accent { color: var(--accent); }
+.eyebrow { margin-bottom: 10px; color: var(--accent-2); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.kbd { padding: 2px 7px; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--card-solid); font-family: var(--mono-font); font-size: 0.85em; }
+.slide code, .slide pre { font-family: var(--mono-font); }
+.slide code { padding: 2px 5px; border: 1px solid var(--code-border); border-radius: 4px; background: var(--code-bg); }
+.slide pre { padding: 16px; overflow: hidden; border: 1px solid var(--code-border); border-radius: 6px; background: var(--code-bg); font-size: 16px; }
+.gradient-text, .slide.section h1 { background: var(--gradient); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.slide.section { align-items: center; text-align: center; }
+.slide.section h1 { font-size: 3em; }
+
+.title-slide { background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 58%, transparent 100%), var(--bg); }
+.title-slide .bg-image { position: absolute; top: 0; right: 0; z-index: 0; width: 40%; height: 100%; object-fit: cover; mask-image: linear-gradient(90deg, transparent, black 18%); }
+.title-slide .slide-content { position: relative; z-index: 1; max-width: 58%; }
+.title-slide h1 { font-size: 2em; }
+
+.context-window { width: 100%; padding: 24px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--card); }
+.context-flow { display: flex; align-items: stretch; gap: 12px; }
+.context-flow .node { display: flex; flex: 1; flex-direction: column; justify-content: center; min-width: 0; padding: 18px 14px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--card-solid); text-align: center; }
+.context-flow .node strong { margin-bottom: 8px; color: var(--accent-2); font-size: 18px; }
+.context-flow .node span { color: var(--muted); font-size: 15px; line-height: 1.4; }
+.context-flow .node.prompt { flex: 1.25; border-color: var(--accent); }
+.context-flow .arrow { align-self: center; color: var(--accent); font-size: 24px; }
+.context-return { margin-top: 16px; color: var(--good); text-align: right; font-size: 16px; }
+
+.slide-footer { position: absolute; right: 88px; bottom: 26px; left: 88px; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 13px; }
+.slide-footer a { color: var(--muted); }
+.slide.no-footer .slide-footer { display: none; }
+
+#progress-bar { position: fixed; top: 0; left: 0; z-index: 50; height: 4px; background: var(--gradient); transition: width 0.2s ease; }
+#slide-counter { position: fixed; right: 18px; bottom: 12px; z-index: 50; color: var(--muted); font-family: var(--mono-font); font-size: 13px; }
+#notes-overlay { position: fixed; inset: 0; z-index: 60; display: none; padding: 60px 100px; overflow: auto; background: rgba(5, 8, 22, 0.96); color: var(--fg); font-size: 22px; line-height: 1.6; white-space: pre-wrap; }
+#notes-overlay.visible { display: block; }
+#notes-overlay h2 { margin-top: 0; color: var(--accent-2); }
+#overview { position: fixed; inset: 0; z-index: 55; display: none; padding: 40px; overflow: auto; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; background: var(--bg-deep); }
+#overview.visible { display: grid; }
+.overview-thumb { position: relative; aspect-ratio: 16 / 9; padding: 16px; overflow: hidden; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg); cursor: pointer; transition: transform 0.15s ease, border-color 0.15s ease; }
+.overview-thumb:hover { transform: translateY(-4px); border-color: var(--accent); }
+.overview-thumb .thumb-number { color: var(--accent-2); font-family: var(--mono-font); font-size: 12px; }
+.overview-thumb .thumb-title { margin-top: 6px; color: var(--fg); font-size: 15px; font-weight: 700; }
+.overview-thumb.current { border-color: var(--accent-2); }
+.hint { position: fixed; bottom: 12px; left: 18px; z-index: 50; color: var(--muted); font-family: var(--mono-font); font-size: 12px; opacity: 0.7; }
+</style>
 </head>
 <body>
 
-<div id="stage">
+<div id="deck">
 
 <!-- 1 -->
-<section class="slide title-slide">
+<section class="slide title-slide" data-notes="Done 100's of Prototypes&#10;Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems&#10;Specialize in AI in the SDLD or TDLC">
   <img class="bg-image" src="img/00-jamesgress.png" alt="">
   <div class="slide-content">
-    <h1>AI at Work and in Life (Opportunities to Optimize)</h1>
+    <h1 class="gradient-text">AI at Work and in Life (Opportunities to Optimize)</h1>
     <h2>James Gress</h2>
     <h3><em>AI Director Accenture</em></h3>
     <p>
-      <i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/jamesgress/">jamesgress</a><br>
-      <i class="fa-brands fa-github"></i> GitHub: <a href="https://github.com/jmgress">jmgress</a><br>
-      <i class="fa-brands fa-meetup"></i> <a href="https://www.meetup.com/tampa-bay-generative-ai-meetup/">Tampa Bay Generative AI Meetup</a>
+      LinkedIn: <a href="https://linkedin.com/in/jamesgress/">jamesgress</a><br>
+      GitHub: <a href="https://github.com/jmgress">jmgress</a><br>
+      <a href="https://www.meetup.com/tampa-bay-generative-ai-meetup/">Tampa Bay Generative AI Meetup</a>
     </p>
   </div>
-  <aside class="notes">
-Done 100's of Prototypes
-Taken 10 applications to Production ranging from simple RAG to more complex Agentic systems
-Specialize in AI in the SDLD or TDLC
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
@@ -46,31 +191,26 @@ Specialize in AI in the SDLD or TDLC
 </section>
 
 <!-- 3 -->
-<section class="slide">
+<section class="slide" data-notes="Typical ordering inside the context window&#10;System prompt - The hidden instructions from the platform or developer.&#10;Example: &quot;You are ChatGPT, a large language model trained by OpenAI. Follow these guidelines...&quot;&#10;Can also include special behavior rules, safety policies, or formatting requirements.&#10;Developer or application-specific instructions - Additional hidden setup from the app integrating the model.&#10;Example: &quot;Always respond in JSON unless otherwise specified.&quot;&#10;Conversation history - Your past messages + the model's past responses.&#10;May be direct text or summaries if the history is long.&#10;Injected knowledge or retrieved content - Snippets from web search, databases, documents, or memory.&#10;Your latest prompt - The most recent user message.&#10;&#10;System Prompts can vastly adjust the behavior, some issues in the past have been&#10;Google, implicit prompt bias, with image generation&#10;Grok, spreading extremist narratives&#10;OpenAI sycophantic behavior">
   <h1>Context is Everything: Why the AI Seems to &ldquo;Get&rdquo; You</h1>
-  <img class="centered-image" data-center src="img/contextwindow.drawio.svg" alt="Context window ordering diagram">
-  <aside class="notes">
-Typical ordering inside the context window
-System prompt – The hidden instructions from the platform or developer.
-Example: “You are ChatGPT, a large language model trained by OpenAI. Follow these guidelines…”
-Can also include special behavior rules, safety policies, or formatting requirements.
-Developer or application-specific instructions – Additional hidden setup from the app integrating the model.
-Example: “Always respond in JSON unless otherwise specified.”
-Conversation history – Your past messages + the model’s past responses.
-May be direct text or summaries if the history is long.
-Injected knowledge or retrieved content – Snippets from web search, databases, documents, or memory.
-Your latest prompt – The most recent user message.
-
-System Prompts can vastly ajust the behavior, some issues in the past have been
-Google, Implicit prompt bias, with image generation
-Grok, Spreading extremist narratives
-OpenAI Sycophantic behavior
-  </aside>
+  <div class="context-window" role="img" aria-label="Context window containing memory, conversation, retrieved information, and the current prompt, used to produce a response">
+    <div class="eyebrow">What shapes the response</div>
+    <div class="flow context-flow">
+      <div class="node"><strong>Memory</strong><span>Saved preferences and relevant details</span></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><strong>Conversation</strong><span>Recent messages and summaries</span></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><strong>Retrieved context</strong><span>Documents, search, and connected knowledge</span></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="node prompt"><strong>Your latest prompt</strong><span>Persona · Context · Task · Format</span></div>
+    </div>
+    <div class="context-return">Together, these inform the model's response</div>
+  </div>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
 <!-- 4 -->
-<section class="slide">
+<section class="slide" data-notes="https://www.genspark.ai/">
   <h1>Lot's of tools in this space (here is a handful)</h1>
   <ul>
     <li><a href="https://chatgpt.com/">https://chatgpt.com/</a></li>
@@ -82,14 +222,11 @@ OpenAI Sycophantic behavior
     <li><a href="https://grok.com/">https://grok.com/</a></li>
     <li><a href="https://chat.mistral.ai/chat">https://chat.mistral.ai/chat</a></li>
   </ul>
-  <aside class="notes">
-https://www.genspark.ai/
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
 <!-- 5 -->
-<section class="slide">
+<section class="slide" data-notes="No single &quot;best&quot; model - pick based on the task:&#10;- Reasoning-heavy work → Opus or GPT-5.1 Thinking&#10;- Fast drafting &amp; chat → Sonnet or Haiku&#10;- Research with big docs → Gemini&#10;- Current events / social signal → Grok">
   <h1>Comparing Today's Top Models</h1>
   <table>
     <thead>
@@ -104,13 +241,6 @@ https://www.genspark.ai/
       <tr><td><strong>xAI</strong></td><td>Grok 4</td><td>Real-time X/web data, more candid tone</td></tr>
     </tbody>
   </table>
-  <aside class="notes">
-No single "best" model — pick based on the task:
-- Reasoning-heavy work → Opus or GPT-5.1 Thinking
-- Fast drafting &amp; chat → Sonnet or Haiku
-- Research with big docs → Gemini
-- Current events / social signal → Grok
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
@@ -165,21 +295,13 @@ No single "best" model — pick based on the task:
 </section>
 
 <!-- 10 -->
-<section class="slide">
+<section class="slide" data-notes="This is a general-audience discussion about how AI tools work and what we are talking to. I will use ChatGPT, though many other tools offer similar features.&#10;&#10;Some things work really well; others do not. Better context can often improve the result.&#10;&#10;Try: &quot;What are you? How did you get created?&quot;">
   <h1>Let's do this live..... it's more exciting and what could go wrong?</h1>
-  <aside class="notes">
-This a general audience discussion on how some of AI tools work and what are we exactly talking to, will be using ChatGPT but
-there are many others, and a lof of them have similer features.
-
-Somthings work really well, however somethings don't, and somethings if we give it a bit better context can get more out of them
-
-type in "What are you?, "What are you?, How did you get created"
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
 <!-- 11 -->
-<section class="slide">
+<section class="slide" data-notes="Example - opening 5 roles:&#10;Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the staffing tool.">
   <h1>Don't Overly Complicate Things</h1>
   <p>You don't need a perfect prompt to get value.</p>
   <ul>
@@ -307,15 +429,11 @@ type in "What are you?, "What are you?, How did you get created"
     <li><strong>Multi-step execution</strong> — plans and chains actions to completion</li>
     <li><strong>Desktop app, paid plans only</strong></li>
   </ul>
-  <aside class="notes">
-Example — opening 5 roles:
-Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the staffing tool.
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
 <!-- 23 -->
-<section class="slide">
+<section class="slide" data-notes="This works well because it asks Deep Research to:&#10;Pull from current, credible sources&#10;Perform multi-step reasoning (finding, comparing, summarizing)&#10;Give structured output that's presentation-ready&#10;&#10;Also noticed that this triggers a message across to mobile devices that it has started">
   <h1>Canvas Mode</h1>
   <ul>
     <li>Canvas is a collaborative editing space that opens alongside the chat so you and the AI can work together on longer-form content—like documents, code, or designs—in a structured, editable format.</li>
@@ -411,18 +529,10 @@ Cowork reads your inbox, pre-fills role requests, and drafts JDs directly in the
     Highlight potential pitfalls or risks for each use case.
     Organize your findings in a clear table with citations.
   </blockquote>
-  <aside class="notes">
-This works well because it forces Deep Research to:
-Pull from current, credible sources
-Perform multi-step reasoning (finding, comparing, summarizing)
-Give structured output that’s presentation-ready
-
-Also noticed that this triggers a message across to mobile devices that it has started
-  </aside>
   <div class="slide-footer"><span>James Gress | AI Director @ Accenture | <a href="https://jmgress.github.io/usegenai/">https://jmgress.github.io/usegenai/</a></span></div>
 </section>
 
-</div><!-- /#stage -->
+</div><!-- /#deck -->
 
 <div id="progress-bar"></div>
 <div id="slide-counter">1 / 32</div>
@@ -431,6 +541,180 @@ Also noticed that this triggers a message across to mobile devices that it has s
 <div id="notes-overlay"></div>
 <div id="overview"></div>
 
-<script src="js/deck.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var total = slides.length;
+  var current = 0;
+  var stage = document.getElementById("deck");
+  var progressBar = document.getElementById("progress-bar");
+  var counter = document.getElementById("slide-counter");
+  var notesOverlay = document.getElementById("notes-overlay");
+  var overview = document.getElementById("overview");
+
+  function clamp(index) {
+    return Math.max(0, Math.min(total - 1, index));
+  }
+
+  function slideFromHash() {
+    var match = /^#\/?(\d+)$/.exec(window.location.hash);
+    if (match) {
+      var index = parseInt(match[1], 10) - 1;
+      if (!isNaN(index)) return clamp(index);
+    }
+    return 0;
+  }
+
+  function updateNotes() {
+    if (!notesOverlay || !notesOverlay.classList.contains("visible")) return;
+    renderNotes();
+  }
+
+  function updateChrome() {
+    slides.forEach(function (slide, index) {
+      slide.classList.toggle("active", index === current);
+    });
+    if (progressBar) progressBar.style.width = ((current + 1) / total) * 100 + "%";
+    if (counter) counter.textContent = (current + 1) + " / " + total;
+    updateNotes();
+  }
+
+  function goTo(index, options) {
+    current = clamp(index);
+    updateChrome();
+    var hash = "#/" + (current + 1);
+    if (window.location.hash !== hash) {
+      if (options && options.replace) history.replaceState(null, "", hash);
+      else history.pushState(null, "", hash);
+    }
+  }
+
+  function next() { goTo(current + 1); }
+  function previous() { goTo(current - 1); }
+
+  function renderNotes() {
+    var heading = document.createElement("h2");
+    heading.textContent = "Speaker Notes - Slide " + (current + 1) + " / " + total;
+    var content = document.createElement("div");
+    content.textContent = slides[current].dataset.notes || "(no notes for this slide)";
+    notesOverlay.replaceChildren(heading, content);
+  }
+
+  function toggleNotes() {
+    notesOverlay.classList.toggle("visible");
+    if (notesOverlay.classList.contains("visible")) renderNotes();
+  }
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen && document.exitFullscreen();
+    }
+  }
+
+  function buildOverview() {
+    overview.replaceChildren();
+    slides.forEach(function (slide, index) {
+      var thumb = document.createElement("div");
+      thumb.className = "overview-thumb" + (index === current ? " current" : "");
+      var heading = slide.querySelector("h1, h2, h3");
+      var number = document.createElement("div");
+      number.className = "thumb-number";
+      number.textContent = String(index + 1).padStart(2, "0");
+      var title = document.createElement("div");
+      title.className = "thumb-title";
+      title.textContent = heading ? heading.textContent : "Slide " + (index + 1);
+      thumb.append(number, title);
+      thumb.addEventListener("click", function () {
+        goTo(index);
+        toggleOverview(false);
+      });
+      overview.appendChild(thumb);
+    });
+  }
+
+  function toggleOverview(force) {
+    var show = typeof force === "boolean" ? force : !overview.classList.contains("visible");
+    if (show) buildOverview();
+    overview.classList.toggle("visible", show);
+  }
+
+  function scaleStage() {
+    var scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+    stage.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (notesOverlay.classList.contains("visible") && !["s", "S", "Escape"].includes(event.key)) return;
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+      case " ":
+      case "PageDown":
+        event.preventDefault();
+        next();
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+      case "PageUp":
+        event.preventDefault();
+        previous();
+        break;
+      case "Home":
+        event.preventDefault();
+        goTo(0);
+        break;
+      case "End":
+        event.preventDefault();
+        goTo(total - 1);
+        break;
+      case "f":
+      case "F":
+        toggleFullscreen();
+        break;
+      case "o":
+      case "O":
+        toggleOverview();
+        break;
+      case "s":
+      case "S":
+        toggleNotes();
+        break;
+      case "Escape":
+        if (overview.classList.contains("visible")) toggleOverview(false);
+        if (notesOverlay.classList.contains("visible")) toggleNotes();
+        break;
+    }
+  });
+
+  var touchStartX = null;
+  document.addEventListener("touchstart", function (event) {
+    touchStartX = event.changedTouches[0].screenX;
+  }, { passive: true });
+  document.addEventListener("touchend", function (event) {
+    if (touchStartX === null) return;
+    var deltaX = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX < 0) next();
+      else previous();
+    }
+    touchStartX = null;
+  }, { passive: true });
+
+  window.addEventListener("hashchange", function () {
+    current = slideFromHash();
+    updateChrome();
+  });
+  window.addEventListener("resize", scaleStage);
+
+  current = slideFromHash();
+  scaleStage();
+  updateChrome();
+  goTo(current, { replace: true });
+})();
+</script>
 </body>
 </html>
