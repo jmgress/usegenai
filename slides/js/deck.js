@@ -12,6 +12,8 @@
   var stage = document.getElementById("stage");
   var progressBar = document.getElementById("progress-bar");
   var counter = document.getElementById("slide-counter");
+  var prevButton = document.getElementById("prev-button");
+  var nextButton = document.getElementById("next-button");
   var notesOverlay = document.getElementById("notes-overlay");
   var overview = document.getElementById("overview");
 
@@ -28,6 +30,13 @@
     return 0;
   }
 
+  function updateOverlayState() {
+    document.body.classList.toggle(
+      "overlay-open",
+      notesOverlay.classList.contains("visible") || overview.classList.contains("visible")
+    );
+  }
+
   function updateChrome() {
     slides.forEach(function (s, i) {
       s.classList.toggle("active", i === current);
@@ -38,6 +47,13 @@
     if (counter) {
       counter.textContent = (current + 1) + " / " + total;
     }
+    if (prevButton) {
+      prevButton.disabled = current === 0;
+    }
+    if (nextButton) {
+      nextButton.disabled = current === total - 1;
+    }
+    updateOverlayState();
     updateNotes();
   }
 
@@ -72,6 +88,7 @@
 
   function toggleNotes() {
     notesOverlay.classList.toggle("visible");
+    updateOverlayState();
     if (notesOverlay.classList.contains("visible")) renderNotes();
   }
 
@@ -109,6 +126,7 @@
     var show = typeof force === "boolean" ? force : !overview.classList.contains("visible");
     if (show) buildOverview();
     overview.classList.toggle("visible", show);
+    updateOverlayState();
   }
 
   function scaleStage() {
@@ -164,6 +182,13 @@
         break;
     }
   });
+
+  if (prevButton) {
+    prevButton.addEventListener("click", prev);
+  }
+  if (nextButton) {
+    nextButton.addEventListener("click", next);
+  }
 
   // Touch / swipe navigation
   var touchStartX = null;

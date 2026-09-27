@@ -235,14 +235,55 @@ svg.mermaid, svg[id^="mermaid-"] {
   transition: width 0.2s ease;
 }
 
-#slide-counter {
+#deck-nav {
   position: fixed;
   right: 18px;
   bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 50;
+}
+
+#deck-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#slide-counter {
   font-size: 13px;
   color: var(--fg-muted);
   font-family: var(--font-mono);
-  z-index: 50;
+}
+
+.nav-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--fg);
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: var(--accent-1);
+}
+
+.nav-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+body.overlay-open #deck-nav-buttons {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Speaker notes overlay */
