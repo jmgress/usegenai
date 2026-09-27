@@ -19,6 +19,7 @@ inline slide-engine `<script>`. Keep it that way.
   Never embed base64 data URIs.
 - Diagrams use inline HTML/CSS or inline SVG only.
 - Preserve the keyboard/click/touch navigation engine, slide counter, footer, and progress bar.
+- Include visible Previous and Next buttons as tracked by the GitHub issue "Add Previous and Next Buttons to Slide Navigation". Use accessible labels, disable Previous on the first slide and Next on the last, and keep both buttons synchronized with keyboard, touch, hash, counter, progress, notes, and overview navigation.
 - Each slide must fit one screen (1280×720 stage). Prefer concise bullets, two-column
   `.columns` layouts, and the existing card/table/code styles.
 - Commit messages describe the presentation content change, not the HTML mechanics.
