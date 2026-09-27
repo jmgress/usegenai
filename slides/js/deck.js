@@ -14,6 +14,9 @@
   var counter = document.getElementById("slide-counter");
   var notesOverlay = document.getElementById("notes-overlay");
   var overview = document.getElementById("overview");
+  var navButtons = document.getElementById("nav-buttons");
+  var prevBtn = document.getElementById("prev-btn");
+  var nextBtn = document.getElementById("next-btn");
 
   function clamp(n) {
     return Math.max(0, Math.min(total - 1, n));
@@ -38,6 +41,8 @@
     if (counter) {
       counter.textContent = (current + 1) + " / " + total;
     }
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === total - 1;
     updateNotes();
   }
 
@@ -73,6 +78,13 @@
   function toggleNotes() {
     notesOverlay.classList.toggle("visible");
     if (notesOverlay.classList.contains("visible")) renderNotes();
+    updateNavButtonsVisibility();
+  }
+
+  function updateNavButtonsVisibility() {
+    if (!navButtons) return;
+    var hide = notesOverlay.classList.contains("visible") || overview.classList.contains("visible");
+    navButtons.classList.toggle("hidden", hide);
   }
 
   function toggleFullscreen() {
@@ -109,6 +121,7 @@
     var show = typeof force === "boolean" ? force : !overview.classList.contains("visible");
     if (show) buildOverview();
     overview.classList.toggle("visible", show);
+    updateNavButtonsVisibility();
   }
 
   function scaleStage() {
@@ -185,6 +198,9 @@
   });
 
   window.addEventListener("resize", scaleStage);
+
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
 
   // Init
   current = slideFromHash();

@@ -155,6 +155,11 @@ html, body {
 .overview-thumb .thumb-title { margin-top: 6px; color: var(--fg); font-size: 15px; font-weight: 700; }
 .overview-thumb.current { border-color: var(--accent-2); }
 .hint { position: fixed; bottom: 12px; left: 18px; z-index: 50; color: var(--muted); font-family: var(--mono-font); font-size: 12px; opacity: 0.7; }
+#nav-buttons { position: fixed; right: 90px; bottom: 6px; z-index: 50; display: flex; gap: 8px; }
+#nav-buttons.hidden { display: none; }
+.nav-btn { width: 26px; height: 26px; padding: 0; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--card-solid); color: var(--fg); font-family: var(--mono-font); font-size: 14px; line-height: 1; cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease; }
+.nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-2); }
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
 </style>
 </head>
 <body>
@@ -537,6 +542,10 @@ html, body {
 <div id="progress-bar"></div>
 <div id="slide-counter">1 / 32</div>
 <div class="hint">← → nav · S notes · O overview · F fullscreen</div>
+<div id="nav-buttons">
+  <button type="button" class="nav-btn" id="prev-btn" aria-label="Previous slide">‹</button>
+  <button type="button" class="nav-btn" id="next-btn" aria-label="Next slide">›</button>
+</div>
 
 <div id="notes-overlay"></div>
 <div id="overview"></div>
@@ -553,6 +562,9 @@ html, body {
   var counter = document.getElementById("slide-counter");
   var notesOverlay = document.getElementById("notes-overlay");
   var overview = document.getElementById("overview");
+  var navButtons = document.getElementById("nav-buttons");
+  var prevBtn = document.getElementById("prev-btn");
+  var nextBtn = document.getElementById("next-btn");
 
   function clamp(index) {
     return Math.max(0, Math.min(total - 1, index));
@@ -578,6 +590,8 @@ html, body {
     });
     if (progressBar) progressBar.style.width = ((current + 1) / total) * 100 + "%";
     if (counter) counter.textContent = (current + 1) + " / " + total;
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === total - 1;
     updateNotes();
   }
 
@@ -605,6 +619,13 @@ html, body {
   function toggleNotes() {
     notesOverlay.classList.toggle("visible");
     if (notesOverlay.classList.contains("visible")) renderNotes();
+    updateNavButtonsVisibility();
+  }
+
+  function updateNavButtonsVisibility() {
+    if (!navButtons) return;
+    var hide = notesOverlay.classList.contains("visible") || overview.classList.contains("visible");
+    navButtons.classList.toggle("hidden", hide);
   }
 
   function toggleFullscreen() {
@@ -640,6 +661,7 @@ html, body {
     var show = typeof force === "boolean" ? force : !overview.classList.contains("visible");
     if (show) buildOverview();
     overview.classList.toggle("visible", show);
+    updateNavButtonsVisibility();
   }
 
   function scaleStage() {
@@ -709,6 +731,9 @@ html, body {
     updateChrome();
   });
   window.addEventListener("resize", scaleStage);
+
+  if (prevBtn) prevBtn.addEventListener("click", previous);
+  if (nextBtn) nextBtn.addEventListener("click", next);
 
   current = slideFromHash();
   scaleStage();

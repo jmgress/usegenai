@@ -314,3 +314,32 @@ svg.mermaid, svg[id^="mermaid-"] {
   z-index: 50;
   opacity: 0.7;
 }
+
+#nav-buttons {
+  position: fixed;
+  right: 90px;
+  bottom: 6px;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+}
+
+#nav-buttons.hidden { display: none; }
+
+.nav-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  background: var(--bg-alt);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-btn:hover:not(:disabled) { border-color: var(--accent-1); color: var(--accent-3); }
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
